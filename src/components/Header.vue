@@ -1,6 +1,13 @@
 <template>
   <div>
-    <v-app-bar v-if="!$vuetify.breakpoint.smAndDown" elevation="0" color="indigo lighten-5" dense>
+    <v-app-bar
+      fixed
+      flat
+      v-if="!$vuetify.breakpoint.smAndDown"
+      elevation="0"
+      color="indigo lighten-5"
+      dense
+    >
       <!--<v-toolbar-title
         style="font-family: 'Handlee', cursive; font-size: 19pt; color: #455A64"
       >Relson Cardoso</v-toolbar-title>-->
@@ -11,16 +18,16 @@
         <nav class="main_menu">
           <ul>
             <li class="active">
-              <a href="#">Início</a>
+              <a @click="scrollar(1)">Início</a>
             </li>
             <li>
-              <a href="#">Agenda</a>
+              <a @click="scrollar(710)">Biografia</a>
             </li>
             <li>
-              <a href="#">Biografia</a>
+              <a @click="scrollar(1760)">Midias</a>
             </li>
             <li>
-              <a href="#">Mídias</a>
+              <a @click="scrollar(2000)">Agenda</a>
             </li>
             <li>
               <a href="#">Contratante</a>
@@ -117,6 +124,14 @@ export default {
     drawer: false,
     group: null
   }),
+  methods: {
+    scrollar(to) {
+      window.scrollTo({
+        top: to,
+        behavior: "smooth"
+      });
+    }
+  },
   components: {
     Banner
   },
