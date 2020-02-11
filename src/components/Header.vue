@@ -21,10 +21,10 @@
               <a @click="scrollar(1)">Início</a>
             </li>
             <li>
-              <a @click="scrollar(710)">Biografia</a>
+              <a @click="scrollar(625)">Biografia</a>
             </li>
             <li>
-              <a @click="scrollar(1760)">Midias</a>
+              <a @click="scrollar(1670)">Midias</a>
             </li>
             <li>
               <a @click="scrollar(2000)">Agenda</a>
