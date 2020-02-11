@@ -40,9 +40,6 @@
         </v-card>
       </v-col>
     </v-row>
-    <!-- Fechamento da Primeira row -->
-
-    <!-- Segundo título -->
   </div>
 </template>
 
