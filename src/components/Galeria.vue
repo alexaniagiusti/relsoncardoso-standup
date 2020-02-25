@@ -29,7 +29,8 @@ export default {
 
   components: {
     gallery: VueGallery
-  }
+  },
+  created:
 };
 </script>
 
