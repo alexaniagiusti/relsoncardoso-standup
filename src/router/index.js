@@ -10,6 +10,12 @@ const routes = [
     name: 'home',
     component: Home,
   },
+  /*  {
+      path: '/galeria/:id',
+      name: 'galeria',
+      component: Galeria,
+      props: true
+    } */
 ];
 
 const router = new VueRouter({
