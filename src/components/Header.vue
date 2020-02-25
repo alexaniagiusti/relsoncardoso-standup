@@ -1,22 +1,15 @@
 <template>
   <div>
-    <v-app-bar
-      fixed
-      flat
-      v-if="!$vuetify.breakpoint.smAndDown"
-      elevation="0"
-      color="indigo lighten-5"
-      dense
-    >
-      <!--<v-toolbar-title
+    <v-app-bar class="hidden-sm-and-down" fixed flat elevation="0" color="indigo lighten-5" dense>
+      <v-toolbar-title
         style="font-family: 'Handlee', cursive; font-size: 19pt; color: #455A64"
-      >Relson Cardoso</v-toolbar-title>-->
+      >Relson Cardoso</v-toolbar-title>
 
       <v-spacer></v-spacer>
 
       <div class="primary_menu">
         <nav class="main_menu">
-          <ul>
+          <ul style="margin-top: 12px">
             <li class="active">
               <a @click="scrollar(1)">Início</a>
             </li>
@@ -30,24 +23,21 @@
               <a @click="scrollar(2000)">Agenda</a>
             </li>
             <li>
-              <a href="#">Contratante</a>
-            </li>
-            <li>
               <a href="#">Contatos</a>
             </li>
             <li>|</li>
             <li>
-              <a href="#">
+              <a target="_blanck" href="https://www.facebook.com/aldeni.maciel.9">
                 <span style="font-size: 15pt" class="mdi mdi-facebook-box"></span>
               </a>
             </li>
             <li>
-              <a class="page_scroll" href="#">
+              <a target="_blanck" href="https://instagram.com/relsoncardoso?igshid=25wlqhemdv5q">
                 <span style="font-size: 15pt" class="mdi mdi-instagram"></span>
               </a>
             </li>
             <li>
-              <a class="page_scroll" href="#">
+              <a target="_blanck" href="#">
                 <span style="font-size: 15pt" class="mdi mdi-whatsapp"></span>
               </a>
             </li>
@@ -56,11 +46,10 @@
       </div>
     </v-app-bar>
 
-    <!-- Exibição do Menu mobole -->
-    <v-app-bar v-if="$vuetify.breakpoint.smAndDown" absolute flat style="background:rgba(0,0,0,0)">
+    <!-- Exibição do Menu mobile -->
+    <v-app-bar absolute flat style="background:rgba(0,0,0,0)">
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
     </v-app-bar>
-    <Banner v-if="$vuetify.breakpoint.smAndDown" />
     <v-navigation-drawer v-model="drawer" absolute fixed>
       <v-list nav dense>
         <v-list-item-group v-model="group" active-class="deep-purple--text text--accent-4">
@@ -88,9 +77,9 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-
-    <!-- Final da exibição do menu mobile -->
   </div>
+
+  <!-- Final da exibição do menu mobile -->
 </template>
 
 <style scoped>
