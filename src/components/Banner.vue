@@ -1,13 +1,16 @@
 <template>
-  <v-carousel height="670px" app show-arrows-on-hover>
-    <v-carousel-item
-      v-for="(item,i) in items"
-      :key="i"
-      :src="item.src"
-      reverse-transition="fade-transition"
-      transition="fade-transition"
-    ></v-carousel-item>
-  </v-carousel>
+  <div>
+    <v-carousel v-if="!$vuetify.breakpoint.smAndDown" height="670px" app show-arrows-on-hover>
+      <v-carousel-item
+        v-for="(item,i) in items"
+        :key="i"
+        :src="item.src"
+        reverse-transition="fade-transition"
+        transition="fade-transition"
+      ></v-carousel-item>
+    </v-carousel>
+    <v-img v-else src="/assets/img/capa-mobile.png"></v-img>
+  </div>
 </template>
 
 <script>
