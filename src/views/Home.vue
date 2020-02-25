@@ -1,12 +1,12 @@
 <template>
-  <span>
+  <div>
     <Header />
-    <Banner v-if="!$vuetify.breakpoint.smAndDown" />
+    <Banner />
     <Biografia />
     <Midias />
     <Agenda />
     <Footer />
-  </span>
+  </div>
 </template>
 
 <script>
