@@ -2,7 +2,7 @@
   <v-footer height="60px" dark padless>
     <v-card class="flex" flat tile>
       <v-card-title class="light-blue accent-4">
-        <strong class="subheading">Se conecte em nossas Redes Sociais!</strong>
+        <strong class="subtitle-1">Se conecte em minhas Redes Sociais!</strong>
         <br />
 
         <v-spacer></v-spacer>
@@ -32,8 +32,7 @@ export default {
       "mdi-facebook-box",
       "mdi-instagram",
       "mdi-youtube-tv",
-      "fab fa-linkedin",
-      "fab fa-instagram"
+      "fab fa-whatsapp"
     ]
   })
 };
